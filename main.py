@@ -1,15 +1,25 @@
 from initiative import calculate_initiative
+from resources import NUMBER_OF_ROUNDS, SCENARIO_INITIATIVES, Team, RoundState
+    
 
-NUMBER_OF_ROUNDS = 3
 
 def main():
     print("Calculator opened!")
-    for round in NUMBER_OF_ROUNDS:
-        scenario_based_initiative = input(f"Give scenario based initiative for round {round}, leave empty if determined by previous round") 
-        previous_initiative = None
-        current_initiative = None
-    if scenario_based_initiative is not None #
-    calculate_initiative(Round)
+    state = RoundState(None, None)
+    for round_num in range(1, NUMBER_OF_ROUNDS + 1):
+        print(f"Start of round {round_num}")
+        state.round = round_num
+
+        # The first round must be determined by scenario so this works
+        # Could still be improved
+        if SCENARIO_INITIATIVES[state.round] is None:
+            calculate_initiative(state.initiative)
+        else:
+            state.initiative = SCENARIO_INITIATIVES[state.round]
+
+    
+
+
 
 
     

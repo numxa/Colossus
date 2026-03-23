@@ -1,3 +1,5 @@
-from enum import Enum
+from resources import Team, RoundState
 
-def calculate_initiative(previous_turn_initiative):
+
+def calculate_initiative(initiative: Team):
+    print("Initiative calculator here!")
