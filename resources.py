@@ -4,16 +4,17 @@ from enum import Enum
 from typing import Optional
 
 NUMBER_OF_ROUNDS = 3
+REQUIRED_VP_FOR_INITIATIVE = 5
 
 
-class Team(Enum):
+class InitiativeStatus(Enum):
     BLUE = "blue"
     RED = "red"
-    NEITHER = "neither"
+    CONTESTED = "contested"
 
 
 SCENARIO_INITIATIVES = {
-    1: Team.RED,
+    1: InitiativeStatus.RED,
     2: None,
     3: None
 }
@@ -22,4 +23,9 @@ SCENARIO_INITIATIVES = {
 @dataclass
 class RoundState:
     round: int
-    initiative: Optional[Team]
+    initiative: Optional[InitiativeStatus]
+    prev_initiative: Optional[InitiativeStatus]
+    vp_blue: int
+    prev_vp_blue: int
+    vp_red: int
+    prev_vp_red: int
