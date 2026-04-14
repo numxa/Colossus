@@ -28,7 +28,7 @@ def main():
             state.initiative = SCENARIO_INITIATIVES.get(state.round)
 
         print(f"Initiative side is: {state.initiative}")
-
+ 
 
         ########################################################################
         # 
