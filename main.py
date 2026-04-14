@@ -1,4 +1,4 @@
-from initiative import calculate_initiative
+from five_initiative.initiative import calculate_initiative
 from resources import NUMBER_OF_ROUNDS, SCENARIO_INITIATIVES, InitiativeStatus, RoundState
 
 
