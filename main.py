@@ -12,7 +12,7 @@ def round_end(state: RoundState):
 
 def main():
     print("Calculator opened!")
-    state = RoundState(None, None, None, 0, 0, 0, 0)
+    state = RoundState(0, None, None, 0, 0, 0, 0)
     for round_num in range(1, NUMBER_OF_ROUNDS + 1):
         print(f"Start of round {round_num}")
         state.round = round_num
